@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Out - Nike</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/homepage.css">
+    <script src="../js/auth.js"></script>
+    <script src="../js/checkout.js"></script>
+
+    <style>
+        .bill-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full-wrapper container-fluid">
+        <div class="row mb-5">
+            <div class="col-12 border-bottom">
+                <nav class="navbar navbar-expand-sm navbar-light text-uppercase">
+                    <a class="navbar-brand mr-5 border-right" href="../html/homepage.html"><img src="../img/images.png" alt="" style="width: 80px; margin-right: 20px;"> Nike</a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/homepage.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/shoppage.html">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/sitemap.html">Sitemap</a>
+                            </li>
+                        </ul>
+                        <form id="searchForm" class="form-inline my-2 my-lg-0">
+                            <input id="searchInput" class="form-control mr-sm-2" type="text" placeholder="Search">
+                            <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+
+                        <a class="cartbtn nav-link" href="../html/cart.html">
+                            <img src="../img/card.svg" alt="Cart" style="width: 24px;">
+                        </a>
+
+                        <ul class="navbar-nav1" id="auth-section">
+                            <li class="nav-item1">
+                                <a class="nav-link" href="../html/login.html">Login</a>
+                            </li>
+                            <li class="nav-item1" style="margin-top: 5px;">
+                                <a class="nav-link" href="../html/register.html">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row my-auto justify-content-center">
+            <!-- Form điền thông tin -->
+            <div class="col-12 text-center mb-5">
+                <img src="../img/images.png" alt="" srcset="">
+                <h1>CHECK OUT</h1>
+            </div>
+            <div class="col-5 bg-light" style="border-radius: 30px;">
+                <h3 class="card-header mt-3">Thông tin giao hàng</h3>
+                <form id="checkoutForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label">Họ <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="firstName" name="firstName" required>
+                            <div class="invalid-feedback" id="firstNameError"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label">Tên <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="lastName" name="lastName" required>
+                            <div class="invalid-feedback" id="lastNameError"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <div class="invalid-feedback" id="emailError"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">Điện thoại <span class="text-danger">*</span></label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                            <div class="invalid-feedback" id="phoneError"></div>
+                        </div>
+                        <div class="col-12">
+                            <label for="address" class="form-label">Địa chỉ <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="address" name="address" required>
+                            <div class="invalid-feedback" id="addressError"></div>
+                        </div>
+                        <div class="col-md-4 mt-3">
+                            <label for="city" class="form-label">Tỉnh/Thành phố <span class="text-danger">*</span></label>
+                            <select class="form-select" id="city" name="city" required>
+                                <option value="">Chọn tỉnh/thành phố</option>
+                                <option value="TP.HCM">TP. Hồ Chí Minh</option>
+                                <option value="Hà Nội">Hà Nội</option>
+                                <option value="Đà Nẵng">Đà Nẵng</option>
+                                <option value="Cần Thơ">Cần Thơ</option>
+                                <option value="Hải Phòng">Hải Phòng</option>
+                            </select>
+                            <div class="invalid-feedback" id="cityError"></div>
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <label for="note" class="form-label">Ghi chú</label>
+                            <textarea class="form-control" id="note" name="note" rows="3" placeholder="Ghi chú thêm..."></textarea>
+                        </div>
+                    </div>
+                </form>
+                <div class="card3 mt-3" style="width: 100%;">
+                    <div class="card-header">
+                        <h5 class="mb-0">Phương thức vận chuyển</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="shipping" id="standardShipping" value="standard" checked>
+                            <label class="form-check-label" for="standardShipping">
+                                <strong>Giao hàng tiêu chuẩn</strong> - 30.000 VND (3-5 ngày)
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="shipping" id="fastShipping" value="fast">
+                            <label class="form-check-label" for="fastShipping">
+                                <strong>Giao hàng nhanh</strong> - 50.000 VND (1-2 ngày)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="shipping" id="expressShipping" value="express">
+                            <label class="form-check-label" for="expressShipping">
+                                <strong>Giao hàng hỏa tốc</strong> - 100.000 VND (Trong ngày)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="card3 mt-3 " style="width: 100%;">
+                    <div class="card-header">
+                        <h5 class="mb-0">Phương thức thanh toán</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="payment" id="cod" value="cod" checked>
+                            <label class="form-check-label" for="cod">
+                                <i class="fa fa-money me-2"></i> Thanh toán khi nhận hàng (COD)
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="payment" id="bankTransfer" value="bank">
+                            <label class="form-check-label" for="bankTransfer">
+                                <i class="fa fa-university me-2"></i> Chuyển khoản ngân hàng
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="payment" id="creditCard" value="credit">
+                            <label class="form-check-label" for="creditCard">
+                                <i class="fa fa-credit-card me-2"></i> Thẻ tín dụng / Ghi nợ
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Bill sản phẩm -->
+            <div class="col-5">
+                <h3>Đơn hàng của bạn</h3>
+                <div class="bill-box" id="bill-container">
+                    <!-- Bill sản phẩm sẽ được hiển thị ở đây -->
+                </div>
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                    <label class="form-check-label" for="termsCheck">
+                        Tôi đã đọc và đồng ý với <a href="#">điều khoản và điều kiện</a>
+                    </label>
+                    <div class="invalid-feedback" id="termsError"></div>
+                </div>
+                <div class="d-grid gap-2 mt-3">
+                    <button type="submit" class="btn btn-dark" form="checkoutForm" style="border-radius: 40px; padding: 10px; width: 200px;">Đặt hàng</button>
+                    <a href="cart.html" class="btn btn-outline-secondary" style="border-radius: 40px; padding: 10px; width: 200px;">Quay lại giỏ hàng</a>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center m-5 border-top p-5">
+            <!-- Resources -->
+            <div class="col-md-4">
+                <h6 class="font-weight-bold mb-3">Resources</h6>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#" class="text-muted">Find A Store</a></li>
+                    <li><a href="#" class="text-muted">Become A Member</a></li>
+                    <li><a href="#" class="text-muted">Running Shoe Finder</a></li>
+                    <li><a href="#" class="text-muted">Send Us Feedback</a></li>
+                </ul>
+            </div>
+
+            <!-- Help -->
+            <div class="col-md-4">
+                <h6 class="font-weight-bold mb-3">Help</h6>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#" class="text-muted">Get Help</a></li>
+                    <li><a href="#" class="text-muted">Order Status</a></li>
+                    <li><a href="#" class="text-muted">Delivery</a></li>
+                    <li><a href="#" class="text-muted">Returns</a></li>
+                    <li><a href="#" class="text-muted">Payment Options</a></li>
+                    <li><a href="#" class="text-muted">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div class="col-md-4">
+                <h6 class="font-weight-bold mb-3">Company</h6>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#" class="text-muted">About Nike</a></li>
+                    <li><a href="#" class="text-muted">News</a></li>
+                    <li><a href="#" class="text-muted">Careers</a></li>
+                    <li><a href="#" class="text-muted">Investors</a></li>
+                    <li><a href="#" class="text-muted">Sustainability</a></li>
+                    <li><a href="#" class="text-muted">Report a Concern</a></li>
+                </ul>
+            </div>
+            <div class="col-12 pt-5 text-center">
+                © 2025 Nike, Inc. All rights reserved Guides Terms of Sale Terms of Use Nike Privacy Policy. Designed by Quang Khai
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

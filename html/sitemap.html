@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap - Nike</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/homepage.css">
+    <script src="../js/auth.js"></script>
+    <style>
+        ul li {
+            list-style: none;
+        }
+        
+        ul li a {
+            color: black;
+            text-decoration: underline;
+        }
+        
+        ul li a:hover {
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row mb-5">
+            <div class="col-12 border-bottom">
+                <nav class="navbar navbar-expand-sm navbar-light text-uppercase">
+                    <a class="navbar-brand mr-5 border-right" href="../html/homepage.html"><img src="../img/images.png" alt="" style="width: 80px; margin-right: 20px;"> Nike</a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/homepage.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/shoppage.html">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/about.html">About</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="../html/sitemap.html">Sitemap<span class="sr-only">(current)</span></a>
+                            </li>
+                        </ul>
+                        <form id="searchForm" class="form-inline my-2 my-lg-0">
+                            <input id="searchInput" class="form-control mr-sm-2" type="text" placeholder="Search">
+                            <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+
+                        <a class="cartbtn nav-link" href="../html/cart.html">
+                            <img src="../img/card.svg" alt="Cart" style="width: 24px;">
+                        </a>
+
+                        <ul class="navbar-nav1" id="auth-section">
+                            <li class="nav-item1">
+                                <a class="nav-link" href="../html/login.html">Login</a>
+                            </li>
+                            <li class="nav-item1" style="margin-top: 5px;">
+                                <a class="nav-link" href="../html/register.html">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <img src="../img/images.png" alt="" srcset="">
+                <h1>SITEMAP</h1>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 mb-3">
+                <div class="p-4 bg-white rounded shadow-sm">
+                    <h4>Main Pages</h4>
+                    <ul>
+                        <li><strong><a href="index.html">Home</a></strong> – Featured products and promotions</li>
+                        <li><a href="shoppage.html">Shop</a> – Browse all our Nike products</li>
+                        <li><a href="item1.html">Product Details</a> – View detailed information of each item</li>
+                        <li><a href="about.html">About Us</a> – Story and vision of NikeShop</li>
+                        <li><a href="#">News</a> – Latest news and updates from NikeShop</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <div class="p-4 bg-white rounded shadow-sm">
+                    <h4>Account & Shopping</h4>
+                    <ul>
+                        <li><a href="login.html">Login</a> – Access your NikeShop account</li>
+                        <li><a href="register.html">Register</a> – Create a new account</li>
+                        <li><a href="cart.html">Cart</a> – View your shopping cart</li>
+                        <li><a href="checkout.html">Checkout</a> – Proceed to payment</li>
+                        <li><a href="confirm.html">Order Confirmation</a> – Confirm that your order was placed successfully</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Site structure diagram -->
+        <div class="col-12 mt-5">
+            <h2 class="text-center mb-4">Site Map Diagram</h2>
+            <div class="site-tree">
+                <div class="tree-node">
+                    <div class="node-content">Home</div>
+                </div>
+                <div class="tree-children">
+                    <div class="tree-child">
+                        <div class="node-content">Shop</div>
+                        <div class="tree-node">
+                            <div class="node-subcontent">Product List</div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="node-subcontent">Product Details</div>
+                        </div>
+                    </div>
+                    <div class="tree-child">
+                        <div class="node-content">Account</div>
+                        <div class="tree-node">
+                            <div class="node-subcontent">Login</div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="node-subcontent">Register</div>
+                        </div>
+                    </div>
+                    <div class="tree-child">
+                        <div class="node-content">Shopping</div>
+                        <div class="tree-node">
+                            <div class="node-subcontent">Cart</div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="node-subcontent">Checkout</div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="node-subcontent">Order Confirmation</div>
+                        </div>
+                    </div>
+                    <div class="tree-child">
+                        <div class="node-content">Information</div>
+                        <div class="tree-node">
+                            <div class="node-subcontent">About Us</div>
+                        </div>
+                        <div class="tree-node">
+                            <div class="node-subcontent">Sitemap</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center m-5 border-top p-5">
+            <!-- Resources -->
+            <div class="col-md-4">
+                <h6 class="font-weight-bold mb-3">Resources</h6>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#" class="text-muted">Find A Store</a></li>
+                    <li><a href="#" class="text-muted">Become A Member</a></li>
+                    <li><a href="#" class="text-muted">Running Shoe Finder</a></li>
+                    <li><a href="#" class="text-muted">Send Us Feedback</a></li>
+                </ul>
+            </div>
+
+            <!-- Help -->
+            <div class="col-md-4">
+                <h6 class="font-weight-bold mb-3">Help</h6>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#" class="text-muted">Get Help</a></li>
+                    <li><a href="#" class="text-muted">Order Status</a></li>
+                    <li><a href="#" class="text-muted">Delivery</a></li>
+                    <li><a href="#" class="text-muted">Returns</a></li>
+                    <li><a href="#" class="text-muted">Payment Options</a></li>
+                    <li><a href="#" class="text-muted">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div class="col-md-4">
+                <h6 class="font-weight-bold mb-3">Company</h6>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#" class="text-muted">About Nike</a></li>
+                    <li><a href="#" class="text-muted">News</a></li>
+                    <li><a href="#" class="text-muted">Careers</a></li>
+                    <li><a href="#" class="text-muted">Investors</a></li>
+                    <li><a href="#" class="text-muted">Sustainability</a></li>
+                    <li><a href="#" class="text-muted">Report a Concern</a></li>
+                </ul>
+            </div>
+            <div class="col-12 pt-5 text-center">
+                © 2025 Nike, Inc. All rights reserved Guides Terms of Sale Terms of Use Nike Privacy Policy. Designed by Quang Khai
+            </div>
+        </div>
+</body>
+
+</html>

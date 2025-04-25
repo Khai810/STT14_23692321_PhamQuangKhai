@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Your Order - Nike</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/homepage.css">
+    <script src="../js/auth.js"></script>
+
+</head>
+
+<body>
+
+    <div class="full-wrapper container-fluid">
+        <div class="row mb-5">
+            <div class="col-12 border-bottom">
+                <nav class="navbar navbar-expand-sm navbar-light text-uppercase">
+                    <a class="navbar-brand mr-5 border-right" href="../html/homepage.html"><img src="../img/images.png" alt="" style="width: 80px; margin-right: 20px;"> Nike</a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/homepage.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/shoppage.html">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/sitemap.html">Sitemap</a>
+                            </li>
+                        </ul>
+                        <form id="searchForm" class="form-inline my-2 my-lg-0">
+                            <input id="searchInput" class="form-control mr-sm-2" type="text" placeholder="Search">
+                            <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+
+                        <a class="nav-link" href="../html/cart.html" style="border-radius: 50px; background-color: black; margin-left: 50px;">
+                            <img src="../img/card.svg" alt="Cart" style="width: 24px;">
+                        </a>
+
+                        <ul class="navbar-nav1" id="auth-section">
+                            <li class="nav-item1">
+                                <a class="nav-link" href="../html/login.html">Login</a>
+                            </li>
+                            <li class="nav-item1" style="margin-top: 5px;">
+                                <a class="nav-link" href="../html/register.html">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row my-auto justify-content-center">
+            <div class="col-12 text-center mb-5">
+                <img src="../img/images.png" alt="" srcset="">
+                <h1>CONGRATULATIONS</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-2">
+            <div class="confirmhead col-5 bg-light mt-5">
+                <h3 class="card-header mt-3">Đặt hàng thành công!</h3>
+                <p class="text-center">Cảm ơn bạn đã đặt hàng tại NIKE.Inc! Đơn hàng của bạn đã được tiếp nhận và đang được xử lý.</p>
+                <div class="section1" id="orderInfo"></div>
+            </div>
+        </div>
+        <div class="row justify-content-center my-auto">
+            <div class="col-5 border-top bg-light my-auto">
+                <div class="section1 mt-2" id="billContainer"></div>
+            </div>
+        </div>
+        <div class="row justify-content-center my-auto">
+            <div class="col-5 text-center bg-light">
+                <button class="cfmbtn btn mt-5 mb-5" onclick="location.href='homepage.html'" style="cursor: pointer;">Về Trang Chủ</button>
+            </div>
+        </div>
+        <div class="row justify-content-center m-5 border-top p-5">
+            <!-- Resources -->
+            <div class="col-md-4">
+                <h6 class="font-weight-bold mb-3">Resources</h6>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#" class="text-muted">Find A Store</a></li>
+                    <li><a href="#" class="text-muted">Become A Member</a></li>
+                    <li><a href="#" class="text-muted">Running Shoe Finder</a></li>
+                    <li><a href="#" class="text-muted">Send Us Feedback</a></li>
+                </ul>
+            </div>
+
+            <!-- Help -->
+            <div class="col-md-4">
+                <h6 class="font-weight-bold mb-3">Help</h6>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#" class="text-muted">Get Help</a></li>
+                    <li><a href="#" class="text-muted">Order Status</a></li>
+                    <li><a href="#" class="text-muted">Delivery</a></li>
+                    <li><a href="#" class="text-muted">Returns</a></li>
+                    <li><a href="#" class="text-muted">Payment Options</a></li>
+                    <li><a href="#" class="text-muted">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div class="col-md-4">
+                <h6 class="font-weight-bold mb-3">Company</h6>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#" class="text-muted">About Nike</a></li>
+                    <li><a href="#" class="text-muted">News</a></li>
+                    <li><a href="#" class="text-muted">Careers</a></li>
+                    <li><a href="#" class="text-muted">Investors</a></li>
+                    <li><a href="#" class="text-muted">Sustainability</a></li>
+                    <li><a href="#" class="text-muted">Report a Concern</a></li>
+                </ul>
+            </div>
+            <div class="col-12 pt-5 text-center">
+                © 2025 Nike, Inc. All rights reserved Guides Terms of Sale Terms of Use Nike Privacy Policy. Designed by Quang Khai
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Hiển thị thông tin người đặt
+        const order = JSON.parse(localStorage.getItem("orderData"));
+        const orderInfo = document.getElementById("orderInfo");
+        if (order) {
+            orderInfo.innerHTML = `
+                <h3>Thông tin người đặt</h3>
+                <p><strong>Họ tên:</strong> ${order.firstName} ${order.lastName}</p>
+                <p><strong>Email:</strong> ${order.email}</p>
+                <p><strong>SĐT:</strong> ${order.phone}</p>
+                <p><strong>Địa chỉ:</strong> ${order.address}, ${order.city}</p>
+                <p><strong>Phương thức giao hàng:</strong> ${order.shipping}</p>
+                <p><strong>Ghi chú:</strong> ${order.note || 'Không có'}</p>
+            `;
+        }
+
+        // Hiển thị hóa đơn
+        const bill = JSON.parse(localStorage.getItem("billData")) || [];
+        const billContainer = document.getElementById("billContainer");
+
+        let total = 0;
+        bill.forEach(item => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+            const itemDiv = document.createElement("div");
+            itemDiv.innerHTML = `
+                <p><strong>${item.name}</strong> (Size: ${item.size || 'N/A'})<br>
+                Số lượng: ${item.quantity} - Đơn giá: ${item.price.toLocaleString('vi-VN')} đ<br>
+                👉 Thành tiền: <strong>${itemTotal.toLocaleString('vi-VN')} đ</strong></p>
+                <hr>
+            `;
+            billContainer.appendChild(itemDiv);
+        });
+
+        const totalDiv = document.createElement("h3");
+        totalDiv.innerHTML = `🧾 <strong>Tổng cộng:</strong> ${total.toLocaleString('vi-VN')} đ`;
+        billContainer.appendChild(totalDiv);
+    });
+</script>
+
+</html>

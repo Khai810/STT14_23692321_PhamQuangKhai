@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register to Nike</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/homepage.css">
+</head>
+
+<body>
+    <div class="full-wrapper container-fluid">
+        <div class="row">
+            <div class="col-12 border-bottom">
+                <nav class="navbar navbar-expand-sm navbar-light text-uppercase">
+                    <a class="navbar-brand mr-5 border-right" href="../html/homepage.html"><img src="../img/images.png" alt="" style="width: 80px; margin-right: 20px;"> Nike</a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/homepage.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/shoppage.html">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/sitemap.html">Sitemap</a>
+                            </li>
+                        </ul>
+                        <form id="searchForm" class="form-inline my-2 my-lg-0">
+                            <input id="searchInput" class="form-control mr-sm-2" type="text" placeholder="Search">
+                            <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+
+                        <a class="cartbtn nav-link" href="../html/cart.html">
+                            <img src="../img/card.svg" alt="Cart" style="width: 24px;">
+                        </a>
+
+                        <ul class="navbar-nav1" id="auth-section">
+                            <li class="nav-item1">
+                                <a class="nav-link" href="../html/login.html">Login</a>
+                            </li>
+                            <li class="nav-item1" style="margin-top: 5px;">
+                                <a class="nav-link" href="../html/register.html">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <form id="registerForm">
+                    <div class="form-group text-center">
+                        <img class="mt-5" src="../img/images.png" alt="" style="width: 80px;">
+                        <h2 class="text-center">Register</h2>
+                    </div>
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" class="form-control" id="fullname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirm-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-block">Register</button>
+                </form>
+                <div id="message" class="text-center mt-3"></div>
+            </div>
+        </div>
+        <div class="row justify-content-center m-5 border-top p-5">
+            <!-- Resources -->
+            <div class="col-md-4">
+                <h6 class="font-weight-bold mb-3">Resources</h6>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#" class="text-muted">Find A Store</a></li>
+                    <li><a href="#" class="text-muted">Become A Member</a></li>
+                    <li><a href="#" class="text-muted">Running Shoe Finder</a></li>
+                    <li><a href="#" class="text-muted">Send Us Feedback</a></li>
+                </ul>
+            </div>
+
+            <!-- Help -->
+            <div class="col-md-4">
+                <h6 class="font-weight-bold mb-3">Help</h6>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#" class="text-muted">Get Help</a></li>
+                    <li><a href="#" class="text-muted">Order Status</a></li>
+                    <li><a href="#" class="text-muted">Delivery</a></li>
+                    <li><a href="#" class="text-muted">Returns</a></li>
+                    <li><a href="#" class="text-muted">Payment Options</a></li>
+                    <li><a href="#" class="text-muted">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div class="col-md-4">
+                <h6 class="font-weight-bold mb-3">Company</h6>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#" class="text-muted">About Nike</a></li>
+                    <li><a href="#" class="text-muted">News</a></li>
+                    <li><a href="#" class="text-muted">Careers</a></li>
+                    <li><a href="#" class="text-muted">Investors</a></li>
+                    <li><a href="#" class="text-muted">Sustainability</a></li>
+                    <li><a href="#" class="text-muted">Report a Concern</a></li>
+                </ul>
+            </div>
+            <div class="col-12 pt-5 text-center">
+                © 2025 Nike, Inc. All rights reserved Guides Terms of Sale Terms of Use Nike Privacy Policy. Designed by Quang Khai
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const fullname = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (password !== confirmPassword) {
+                document.getElementById('message').innerText = "Passwords do not match!";
+                return;
+            }
+
+            const userData = {
+                fullname,
+                email,
+                username,
+                password
+            };
+
+            // Lưu vào localStorage (dùng username làm key)
+            localStorage.setItem("user_" + username, JSON.stringify(userData));
+
+            document.getElementById('message').innerText = "Đăng ký thành công!";
+
+            // Reset form
+            document.getElementById('registerForm').reset();
+        });
+    </script>
+</body>
+
+</html>

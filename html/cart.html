@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Nike</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/homepage.css">
+    <script src="../js/cart.js"></script>
+    <script src="../js/auth.js"></script>
+    <style>
+        .cart-item {
+            margin-bottom: 20px;
+        }
+        
+        .cart-item .btn {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="full-wrapper container-fluid">
+        <div class="row mb-5">
+            <div class="col-12 border-bottom">
+                <nav class="navbar navbar-expand-sm navbar-light text-uppercase">
+                    <a class="navbar-brand mr-5 border-right" href="../html/homepage.html"><img src="../img/images.png" alt="" style="width: 80px; margin-right: 20px;"> Nike</a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/homepage.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/shoppage.html">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/sitemap.html">Sitemap</a>
+                            </li>
+                        </ul>
+                        <form id="searchForm" class="form-inline my-2 my-lg-0">
+                            <input id="searchInput" class="form-control mr-sm-2" type="text" placeholder="Search">
+                            <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+
+                        <a class="cartbtn nav-link" href="../html/cart.html">
+                            <img src="../img/card.svg" alt="Cart" style="width: 24px;">
+                        </a>
+
+                        <ul class="navbar-nav1" id="auth-section">
+                            <li class="nav-item1">
+                                <a class="nav-link" href="../html/login.html">Login</a>
+                            </li>
+                            <li class="nav-item1" style="margin-top: 5px;">
+                                <a class="nav-link" href="../html/register.html">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 text-center mb-5">
+                <img src="../img/images.png" alt="" srcset="">
+                <h1>YOUR CART</h1>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-8 justify-content-center">
+                <div id="cart-list">
+                    <!-- Các sản phẩm trong giỏ sẽ được hiển thị ở đây -->
+                </div>
+
+                <div class="cart-btn text-right mt-4">
+                    <h4 id="total-price">Tổng tiền: 0đ</h4>
+                    <button class="btn btn-danger" onclick="clearCart()">Xóa tất cả</button>
+                    <button id="checkoutBtn" class="btn btn-success">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center m-5 border-top p-5">
+            <!-- Resources -->
+            <div class="col-md-4">
+                <h6 class="font-weight-bold mb-3">Resources</h6>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#" class="text-muted">Find A Store</a></li>
+                    <li><a href="#" class="text-muted">Become A Member</a></li>
+                    <li><a href="#" class="text-muted">Running Shoe Finder</a></li>
+                    <li><a href="#" class="text-muted">Send Us Feedback</a></li>
+                </ul>
+            </div>
+
+            <!-- Help -->
+            <div class="col-md-4">
+                <h6 class="font-weight-bold mb-3">Help</h6>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#" class="text-muted">Get Help</a></li>
+                    <li><a href="#" class="text-muted">Order Status</a></li>
+                    <li><a href="#" class="text-muted">Delivery</a></li>
+                    <li><a href="#" class="text-muted">Returns</a></li>
+                    <li><a href="#" class="text-muted">Payment Options</a></li>
+                    <li><a href="#" class="text-muted">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div class="col-md-4">
+                <h6 class="font-weight-bold mb-3">Company</h6>
+                <ul class="list-unstyled text-muted">
+                    <li><a href="#" class="text-muted">About Nike</a></li>
+                    <li><a href="#" class="text-muted">News</a></li>
+                    <li><a href="#" class="text-muted">Careers</a></li>
+                    <li><a href="#" class="text-muted">Investors</a></li>
+                    <li><a href="#" class="text-muted">Sustainability</a></li>
+                    <li><a href="#" class="text-muted">Report a Concern</a></li>
+                </ul>
+            </div>
+            <div class="col-12 pt-5 text-center">
+                © 2025 Nike, Inc. All rights reserved Guides Terms of Sale Terms of Use Nike Privacy Policy. Designed by Quang Khai
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            displayCart();
+        });
+
+        function displayCart() {
+            const username = localStorage.getItem("currentUser");
+            const cartKey = "cart_" + username;
+            const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+            const cartList = document.getElementById("cart-list");
+            const totalPriceElement = document.getElementById("total-price");
+
+            let totalPrice = 0;
+            cartList.innerHTML = ''; // Clear previous items
+
+            cart.forEach(item => {
+                const itemElement = document.createElement("div");
+                itemElement.classList.add("cart-item");
+                itemElement.innerHTML = `
+                    <div class="row border" style="padding: 10px;">
+                        <div class="col-8">
+                            <h5>${item.name} (Size: ${item.size})</h5>
+                            <p>Giá: ${item.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}</p>
+                            <p>Số lượng: ${item.quantity}</p>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <h5>Tổng: ${(item.price * item.quantity).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}</h5>
+                            <button class="btn" onclick="removeFromCart(${item.id}, '${item.size}')">Xóa</button>
+                        </div>
+                    </div>
+                `;
+                cartList.appendChild(itemElement);
+
+                totalPrice += item.price * item.quantity;
+            });
+
+            totalPriceElement.innerText = `Tổng tiền: ${totalPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}`;
+        }
+
+        function removeFromCart(productId, size) {
+            const username = localStorage.getItem("currentUser");
+            const cartKey = "cart_" + username;
+            let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+            cart = cart.filter(item => !(item.id === productId && item.size === size));
+            localStorage.setItem(cartKey, JSON.stringify(cart));
+
+            displayCart(); // Refresh the cart display
+        }
+
+        function clearCart() {
+            const username = localStorage.getItem("currentUser");
+            const cartKey = "cart_" + username;
+            localStorage.removeItem(cartKey);
+
+            displayCart(); // Refresh the cart display
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const checkoutBtn = document.getElementById("checkoutBtn");
+            checkoutBtn.addEventListener("click", function() {
+                const username = localStorage.getItem("currentUser");
+                const cartKey = "cart_" + username;
+                const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+                if (cart.length === 0) {
+                    alert("Giỏ hàng của bạn đang trống. Vui lòng thêm sản phẩm trước khi thanh toán.");
+                    return;
+                }
+
+                // Nếu có sản phẩm thì chuyển đến trang checkout
+                window.location.href = "checkout.html";
+            });
+        });
+    </script>
+
+</body>
+
+</html>
