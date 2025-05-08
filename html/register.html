@@ -141,11 +141,17 @@
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirm-password').value;
 
+
+            const fullnameRegex = /^[A-Za-zÀ-Ỹà-ỹ]+(?: [A-Za-zÀ-Ỹà-ỹ]+)*$/;
+
             if (password !== confirmPassword) {
                 document.getElementById('message').innerText = "Passwords do not match!";
                 return;
             }
-
+            if (!fullnameRegex.test(fullname)) {
+                message.innerText = "Họ tên không hợp lệ. Chỉ bao gồm chữ cái và khoảng trắng.";
+                return;
+            }
             const userData = {
                 fullname,
                 email,
