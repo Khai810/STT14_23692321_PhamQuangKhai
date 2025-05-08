@@ -142,14 +142,15 @@
             const confirmPassword = document.getElementById('confirm-password').value;
 
 
-            const fullnameRegex = /^[A-Za-zÀ-Ỹà-ỹ]+(?: [A-Za-zÀ-Ỹà-ỹ]+)*$/;
+            const fullnameRegex = /^([A-ZÀ-Ý][a-zà-ý]*)( [A-ZÀ-Ý][a-zà-ý]*)*$/;
+
 
             if (password !== confirmPassword) {
                 document.getElementById('message').innerText = "Passwords do not match!";
                 return;
             }
             if (!fullnameRegex.test(fullname)) {
-                message.innerText = "Họ tên không hợp lệ. Chỉ bao gồm chữ cái và khoảng trắng.";
+                message.innerText = "Họ tên không hợp lệ. Phải có chữ cái viết hoa đầu không có chữ số.";
                 return;
             }
             const userData = {
